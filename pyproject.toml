@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finagentlight"
+version = "1.0.0"
+description = "FinAgentLight is a lightweight library for financial agents. Agents write python code to call tools or orchestrate other agents."
+authors = [
+  { name="Zhang Wentao", email="zhangwent963@gmail.com" }, { name="Zhang Wentao"},
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "transformers>=4.0.0",
+  "requests>=2.32.3",
+  "rich>=13.9.4",
+  "pandas>=2.2.3",
+  "jinja2>=3.1.4",
+  "pillow>=11.0.0",
+  "markdownify>=0.14.1",
+  "numpy>=1.26.4",
+  "gradio>=5.8.0",
+  "duckduckgo-search>=6.3.7",
+  "python-dotenv>=1.0.1",
+  "litellm>=1.55.10",
+]
+
+[tool.ruff]
+ignore = ["F403"]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8.1.0",
+  "sqlalchemy",
+  "ruff>=0.5.0",
+  "accelerate",
+  "soundfile",
+]
