@@ -1,11 +1,17 @@
 from dotenv import load_dotenv
 load_dotenv()
 
-from finagentlight import CodeAgent, LiteLLMModel
+from openai import OpenAI
+
+client = OpenAI()
+
+from finagentlight import CodeAgent, LiteLLMModel, DuckDuckGoSearchTool, VisitWebpageTool
 
 model = LiteLLMModel(
-    model_id="anthropic/claude-3-5-sonnet-20240620",
+    model_id="o1",
 )
-agent = CodeAgent(tools=[], model=model)
+agent = CodeAgent(tools=[
+    DuckDuckGoSearchTool, VisitWebpageTool
+], model=model)
 
-agent.run("Write a queue in Python and save it to the file `queue.py`.")
+print(agent.run("How to make a website?"))

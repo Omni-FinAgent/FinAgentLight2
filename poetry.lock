@@ -546,6 +546,29 @@ primp = ">=0.10.0"
 dev = ["mypy (>=1.13.0)", "pytest (>=8.3.4)", "pytest-dependency (>=0.6.0)", "ruff (>=0.8.3)"]
 
 [[package]]
+name = "exchange-calendars"
+version = "3.6.3"
+description = "exchange_calendars is a Python library with securities exchange calendars"
+optional = false
+python-versions = ">=3.7"
+groups = ["main"]
+files = [
+    {file = "exchange_calendars-3.6.3.tar.gz", hash = "sha256:99d151031a08397668d2707806566fdc7b3ae874e81ff13f876caed2f2a1731d"},
+]
+
+[package.dependencies]
+korean_lunar_calendar = "*"
+numpy = "*"
+pandas = ">=1.1"
+pyluach = "*"
+python-dateutil = "*"
+pytz = "*"
+toolz = "*"
+
+[package.extras]
+dev = ["flake8", "hypothesis", "pip-tools", "pytest", "pytest-benchmark", "pytest-xdist"]
+
+[[package]]
 name = "fastapi"
 version = "0.115.6"
 description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
@@ -1175,6 +1198,18 @@ files = [
 
 [package.dependencies]
 referencing = ">=0.31.0"
+
+[[package]]
+name = "korean-lunar-calendar"
+version = "0.3.1"
+description = "Korean Lunar Calendar"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "korean_lunar_calendar-0.3.1-py3-none-any.whl", hash = "sha256:392757135c492c4f42a604e6038042953c35c6f449dda5f27e3f86a7f9c943e5"},
+    {file = "korean_lunar_calendar-0.3.1.tar.gz", hash = "sha256:eb2c485124a061016926bdea6d89efdf9b9fdbf16db55895b6cf1e5bec17b857"},
+]
 
 [[package]]
 name = "litellm"
@@ -2076,6 +2111,27 @@ test = ["hypothesis (>=6.46.1)", "pytest (>=7.3.2)", "pytest-xdist (>=2.2.0)"]
 xml = ["lxml (>=4.9.2)"]
 
 [[package]]
+name = "pandas-market-calendars"
+version = "4.6.0"
+description = "Market and exchange trading calendars for pandas"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "pandas_market_calendars-4.6.0-py3-none-any.whl", hash = "sha256:9f35fbfca6233716861f614e8e3d5b83790ecb3cf038384d5939b57097d32cd6"},
+    {file = "pandas_market_calendars-4.6.0.tar.gz", hash = "sha256:ca8dbc15434e9eda7c076bb6a456f696be93d1cbd487c02e7c9838907d84a4d5"},
+]
+
+[package.dependencies]
+exchange-calendars = ">=3.3"
+pandas = ">=1.1"
+python-dateutil = "*"
+pytz = "*"
+
+[package.extras]
+dev = ["black", "build", "pre-commit", "pytest"]
+
+[[package]]
 name = "pillow"
 version = "11.1.0"
 description = "Python Imaging Library (Fork)"
@@ -2500,6 +2556,22 @@ files = [
 
 [package.extras]
 windows-terminal = ["colorama (>=0.4.6)"]
+
+[[package]]
+name = "pyluach"
+version = "2.2.0"
+description = "A Python package for dealing with Hebrew (Jewish) calendar dates."
+optional = false
+python-versions = ">=3.7"
+groups = ["main"]
+files = [
+    {file = "pyluach-2.2.0-py3-none-any.whl", hash = "sha256:d1eb49d6292087e9290f4661ae01b60c8c933704ec8c9cef82673b349ff96adf"},
+    {file = "pyluach-2.2.0.tar.gz", hash = "sha256:9063a25387cd7624276fd0656508bada08aa8a6f22e8db352844cd858e69012b"},
+]
+
+[package.extras]
+doc = ["sphinx (>=6.1.3,<6.2.0)", "sphinx_rtd_theme (>=1.2.0,<1.3.0)"]
+test = ["beautifulsoup4", "flake8", "pytest", "pytest-cov"]
 
 [[package]]
 name = "pytest"
@@ -3337,6 +3409,18 @@ files = [
 ]
 
 [[package]]
+name = "toolz"
+version = "1.0.0"
+description = "List processing tools and functional utilities"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "toolz-1.0.0-py3-none-any.whl", hash = "sha256:292c8f1c4e7516bf9086f8850935c799a874039c8bcf959d47b600e4c44a6236"},
+    {file = "toolz-1.0.0.tar.gz", hash = "sha256:2c86e3d9a04798ac556793bced838816296a2f085017664e4995cb40a1047a02"},
+]
+
+[[package]]
 name = "torch"
 version = "2.5.1"
 description = "Tensors and Dynamic neural networks in Python with strong GPU acceleration"
@@ -3789,4 +3873,4 @@ test = ["accelerate", "pytest", "ruff", "soundfile", "sqlalchemy"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12"
-content-hash = "c035a270f638aedc9d96d019e5f11b6f738b0a801c715f1adc514f8a7e1433bf"
+content-hash = "f7b2191957655b1c50b5204d685c81b95f0bbd40588c8013b6c0cf2ee0831aa5"

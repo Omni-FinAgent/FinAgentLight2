@@ -24,6 +24,7 @@ dependencies = [
   "duckduckgo-search>=6.3.7",
   "python-dotenv>=1.0.1",
   "litellm>=1.55.10",
+  "pandas-market-calendars (>=4.6.0,<5.0.0)",
 ]
 
 [tool.ruff]
