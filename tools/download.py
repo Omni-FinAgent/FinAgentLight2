@@ -1,7 +1,5 @@
-import os
 import sys
 from pathlib import Path
-import asyncio
 
 root = str(Path(__file__).resolve().parents[1])
 sys.path.append(root)
@@ -19,6 +17,6 @@ if __name__ == '__main__':
                             exp_path='dataset/workdir/dj30')
 
     try:
-        asyncio.get_event_loop().run_until_complete(downloader.run())
+        downloader.run()
     except KeyboardInterrupt:
         sys.exit()
