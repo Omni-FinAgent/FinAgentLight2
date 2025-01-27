@@ -11,7 +11,7 @@ model = LiteLLMModel(
     model_id="o1",
 )
 agent = CodeAgent(tools=[
-    DuckDuckGoSearchTool, VisitWebpageTool
+    DuckDuckGoSearchTool(), VisitWebpageTool()
 ], model=model)
 
 print(agent.run("How to make a website?"))
